@@ -1,0 +1,229 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font.google */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --primary-color: #35374b;
+  --secondary-color: #7f27ff;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+* {
+  @apply box-border m-0 p-0;
+}
+.section__container {
+  @apply max-w-[var(--max-width)] m-auto px-4 py-20;
+}
+.section__title {
+  @apply text-[2rem] font-semibold text-center sm:text-[2.5rem];
+}
+.section__title2 {
+  @apply text-[2rem] font-semibold text-left;
+}
+.section__title span {
+  @apply text-[color:var(--secondary-color)];
+}
+.section__title2 span {
+  @apply text-[color:var(--secondary-color)];
+}
+.section__subtitle {
+  @apply text-base font-medium text-center;
+}
+img {
+  @apply w-full;
+}
+.btn {
+  @apply text-[0.9rem] font-semibold text-[color:var(--white)] bg-[color:var(--secondary-color)] cursor-pointer transition-[0.9s] p-4 rounded-[5px] border-[none] hover:bg-[white] hover:text-[#7F27FF];
+  outline: none;
+}
+.btn:hover {
+  /* background-color: var(--secondary-color-dark); */
+}
+a {
+  @apply no-underline text-[color:var(--white)];
+}
+body {
+  @apply text-[color:var(--white)];
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  @apply fixed flex justify-center bg-[rgba(0,0,0,0.8)] backdrop-blur-[1px] z-[1000] top-0 inset-x-0; /* top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; */ /* Warna latar belakang dengan opasitas 80% */ /* Efek blur dengan radius 10px */
+}
+
+/* navigation bar */
+.navbar a {
+  @apply text-[white] no-underline mr-5;
+}
+
+/* header */
+header {
+  @apply h-screen bg-[url("assets/bground.jpg")] bg-[center_center] bg-no-repeat bg-cover;
+}
+.header__container {
+  @apply h-full flex flex-col items-start justify-center;
+}
+.header__container p {
+  @apply text-[color:var(--text-light)] max-w-[400px] mx-0 my-4 sm:mx-0 sm:my-8;
+}
+.header__container p span {
+  @apply text-[color:var(--white)] bg-[color:var(--secondary-color)] mr-4 px-4 py-2 rounded-[5px];
+}
+.header__container h1 {
+  @apply text-5xl leading-[3rem] sm:text-[4rem] sm:leading-[4rem] md:text-[5rem] md:leading-[5rem];
+}
+.action__btns {
+  @apply flex items-center gap-4 flex-wrap sm:gap-8;
+}
+
+/* aboutme */
+.about,
+.certificate {
+  @apply bg-[color:var(--text-dark)];
+}
+.about__container {
+  @apply flex flex-col gap-4 sm:flex-row;
+}
+.about__image,
+.about__content {
+  @apply flex-1 flex items-center justify-center flex-col;
+}
+.about__content p {
+  @apply mb-2;
+}
+.about__content ul {
+  @apply my-2;
+}
+.about__image img {
+  @apply max-w-[350px];
+}
+.about__details {
+  @apply text-[color:var(--text-light)] text-center px-0 py-8 sm:text-left;
+  list-style: none;
+}
+.education,
+footer {
+  @apply bg-[color:var(--primary-color)];
+}
+.education__grid {
+  @apply flex justify-center grid-cols-[repeat(1,1fr)] gap-4 flex-wrap flex-row mt-20;
+}
+.certificate__grid {
+  @apply flex justify-center grid-cols-[repeat(1,1fr)] gap-4 mt-20;
+}
+
+/* education history */
+.education__card {
+  @apply flex items-start gap-4 bg-[color:var(--text-dark)] p-8 rounded-[5px] hover:text-[#7F27FF];
+}
+.education__card i {
+  @apply text-2xl;
+}
+.education__card h4 {
+  @apply text-[1.2rem] font-medium;
+}
+.education__card p {
+  @apply text-[color:var(--text-light)];
+}
+
+/* Certificate */
+.certificate__card {
+  @apply grid place-content-center overflow-hidden cursor-pointer relative rounded-[5px];
+}
+.certificate__card img {
+  @apply transition-[scale] duration-[0.3s];
+}
+.certificate__card:hover img {
+  scale: 1.1;
+}
+
+/* footer */
+.footer__container {
+  @apply flex justify-center items-center mt-8 sm:grid-cols-[repeat(2,1fr)];
+}
+.footer__content {
+  @apply flex flex-col items-center justify-center text-center;
+}
+.footer__details {
+  @apply text-[0.8rem] text-[color:var(--text-light)] flex gap-4 mx-0 my-8;
+}
+
+/* kopi kanan */
+.copyright {
+  @apply flex justify-center items-center mt-px;
+}
+
+/* icons */
+.social__icons {
+  @apply flex items-center gap-8;
+}
+.social__icons .icon {
+  @apply text-[color:var(--white)] bg-[color:var(--secondary-color)] transition-[0.9s] cursor-pointer p-2.5 rounded-[5px] hover:bg-[white] hover:text-[#7F27FF];
+}
+.ri-instagram-line {
+  @apply text-xl;
+}
+.ri-facebook-circle-fill {
+  @apply text-xl;
+}
+.ri-github-fill {
+  @apply text-[35px];
+}
+
+/* Contact me */
+.contact-form {
+  @apply mt-5;
+}
+.contact-form .section__title {
+  @apply text-[1.5em] mb-2.5;
+}
+.contact-form form {
+  @apply flex flex-col;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  @apply border text-base text-[black] mb-[15px] p-2.5 rounded-[5px] border-solid border-[#ccc];
+}
+.contact-form textarea {
+  @apply resize-y;
+}
+.contact-form button[type="submit"] {
+  @apply bg-[color:var(--secondary-color)] text-white text-base cursor-pointer px-5 py-2.5 rounded-[5px] border-[none] hover:bg-[white] hover:text-[#7F27FF];
+}
+#darkModeToggle {
+  @apply cursor-pointer text-[inherit] text-inherit no-underline m-0 p-0 border-[none];
+  background: none;
+}
+
+/* responsive */
+@media (min-width: 640px) {
+  .about__content {
+    @apply items-start;
+  }
+  .education__grid,
+  .certificate__grid {
+    @apply grid-cols-[repeat(2,1fr)] gap-8;
+  }
+}
+@media (min-width: 768px) {
+  .education__grid,
+  .certificate__grid {
+    @apply grid-cols-[repeat(3,1fr)];
+  }
+}
+@media (max-width: 640px) {
+  .navbar a {
+    @apply text-[10px];
+  }
+  #darkModeToggle {
+    @apply text-[10px];
+  }
+}
